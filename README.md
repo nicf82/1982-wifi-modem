@@ -116,4 +116,18 @@ and follow instructions. Also in here you can assign fake numbers to point to BB
 
 to connect to the server.
 
-For full docs, refer to the Zimodem README on github.   
+For full docs, refer to the Zimodem README on github.
+
+
+A310 Modification
+-----------------
+
+To get this to work on an Acorn Archimedes (A310, and possibly other machines), the following modification is necessary. 
+
+* Connect Data Set Ready (DSR), Carrier Detect (CD), and Data Terminal Ready (DTR)
+* Connect Clear to Send (CTS) and Request to Send (RTS)
+
+Some (older) serial chips are less forgiving than others and wait for proper handshaking before allowing data to be sent. This is to trick the computer into thinking that it is talking to a compliant serial device.
+
+
+![Modification](IMG_0777.jpg)
